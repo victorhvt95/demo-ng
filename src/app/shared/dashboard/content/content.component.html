@@ -1,0 +1,29 @@
+<div class="dashboard-content">
+  <div class="page-header mat-elevation-z2">
+    <h1>{{ pageTitle }}</h1>
+    <p class="description">
+      Administra, visualiza y edita los registros fácilmente.
+    </p>
+  </div>
+
+  <mat-card class="crud-wrapper mat-elevation-z1">
+    <mat-card-header>
+      <mat-card-title>{{ sectionTitle }}</mat-card-title>
+      <mat-card-subtitle>{{ sectionDescription }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-divider></mat-divider>
+
+    <div class="crud-actions">
+      <button mat-flat-button color="primary" (click)="onCreate()">
+        <mat-icon>add</mat-icon>
+        Nuevo Registro
+      </button>
+    </div>
+
+    <div class="crud-table-container">
+      <!-- Aquí cargarías tus tablas, listas o componentes de listado -->
+      <ng-content></ng-content>
+    </div>
+  </mat-card>
+</div>

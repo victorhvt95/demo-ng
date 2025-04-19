@@ -1,0 +1,18 @@
+<div class="post-detail container">
+  <h1 class="text-center mb-4" *ngIf="post">Detalles del Post</h1>
+
+  <button (click)="back()" class="search-button">{{ "< Atras" }}</button>
+
+  <div *ngIf="post; else loading" class="post-card">
+    <h2>{{ post.title }}</h2>
+    <p><strong>ID:</strong> {{ post.id }}</p>
+    <p><strong>Usuario ID:</strong> {{ post.userId }}</p>
+    <p><strong>Contenido:</strong></p>
+    <p>{{ post.body }}</p>
+  </div>
+
+  <!-- Si el post aún no está cargado, muestra un mensaje de carga -->
+  <ng-template #loading>
+    <p>Cargando...</p>
+  </ng-template>
+</div>

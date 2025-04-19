@@ -1,0 +1,11 @@
+<aside [ngClass]="{ collapsed: isCollapsed }" class="sidebar">
+  <button (click)="toggle()" class="toggle-btn">
+    {{ isCollapsed ? "▶" : "◀" }}
+  </button>
+
+  <nav *ngIf="!isCollapsed" class="menu">
+    <a routerLink="/posts" routerLinkActive="active">Posts</a>
+    <a routerLink="/companies" routerLinkActive="active">Empresa</a>
+    <a routerLink="/profile" routerLinkActive="active">Perfil</a>
+  </nav>
+</aside>

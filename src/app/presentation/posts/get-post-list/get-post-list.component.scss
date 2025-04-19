@@ -1,0 +1,103 @@
+.search-post-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  
+    .search-input-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+  
+      .search-input {
+        width: 100%;
+        max-width: 350px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+      }
+  
+      .search-button {
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      .post-item {
+        padding: 16px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        background-color: #fafafa;
+        transition: background-color 0.3s, box-shadow 0.3s;
+  
+        &:hover {
+          background-color: #f1f1f1;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+  
+        .post-header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8px;
+  
+          .post-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+          }
+  
+          .post-id {
+            font-size: 0.875rem;
+            color: #888;
+          }
+        }
+  
+        .post-body {
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.5;
+        }
+      }
+    }
+  
+    .no-results {
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+    }
+  }
+  
